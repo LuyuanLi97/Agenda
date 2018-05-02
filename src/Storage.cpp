@@ -123,7 +123,7 @@ std::shared_ptr<Storage> Storage::getInstance(void) {
 
 Storage::~Storage() {
 	writeToFile();
-	m_instance == nullptr;
+	m_instance = nullptr;
 }
 
 void Storage::createUser(const User & t_user) {
