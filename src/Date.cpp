@@ -30,17 +30,17 @@ Date::Date(std::string dateString) {
 				 dateString[14]>='0'&&dateString[14]<='9'&&dateString[15]>='0'&&dateString[15]<='9');
 	if( valid && dateString.size()==16 ) {
 		m_year = (dateString[0]-'0')*1000 + (dateString[1]-'0')*100 + (dateString[2]-'0')*10 + (dateString[3]-'0');
-	m_month = (dateString[5]-'0')*10 + (dateString[6]-'0');
-	m_day = (dateString[8]-'0')*10 + (dateString[9]-'0');
-	m_hour = (dateString[11]-'0')*10 + (dateString[12]-'0');
-	m_minute = (dateString[14]-'0')*10 + (dateString[15]-'0');
+		m_month = (dateString[5]-'0')*10 + (dateString[6]-'0');
+		m_day = (dateString[8]-'0')*10 + (dateString[9]-'0');
+		m_hour = (dateString[11]-'0')*10 + (dateString[12]-'0');
+		m_minute = (dateString[14]-'0')*10 + (dateString[15]-'0');
 	}
 	else {
 		m_year = 0;
-	m_month = 0;
-	m_day = 0;
-	m_hour = 0;
-	m_minute = 0;
+		m_month = 0;
+		m_day = 0;
+		m_hour = 0;
+		m_minute = 0;
 	}
 	
 }
@@ -128,20 +128,20 @@ Date Date::stringToDate(const std::string t_dateString) {
 std::string Date::dateToString(Date t_date) {
 	if ( isValid(t_date) ) {
 		std::stringstream sstr;
-	sstr<<t_date.getYear()<<'-';
-	if ( t_date.getMonth()<10 ) 
-		sstr<<'0';
-	sstr<<t_date.getMonth()<<'-';
-	if ( t_date.getDay()<10 ) 
-		sstr<<'0';
-	sstr<<t_date.getDay()<<'/';
-	if ( t_date.getHour()<10 ) 
-		sstr<<'0';
-	sstr<<t_date.getHour()<<':';
-	if ( t_date.getMinute()<10 ) 
-		sstr<<'0';
-	sstr<<t_date.getMinute();
-	return sstr.str();
+		sstr<<t_date.getYear()<<'-';
+		if ( t_date.getMonth()<10 ) 
+			sstr<<'0';
+		sstr<<t_date.getMonth()<<'-';
+		if ( t_date.getDay()<10 ) 
+			sstr<<'0';
+		sstr<<t_date.getDay()<<'/';
+		if ( t_date.getHour()<10 ) 
+			sstr<<'0';
+		sstr<<t_date.getHour()<<':';
+		if ( t_date.getMinute()<10 ) 
+			sstr<<'0';
+		sstr<<t_date.getMinute();
+		return sstr.str();
 	}
 	else return "0000-00-00/00:00";
 }
