@@ -8,10 +8,10 @@ using namespace std;
 Meeting::Meeting(std::string t_sponsor, std::vector<std::string> t_participator, Date t_startTime,
           Date t_endTime, std::string t_title) {
 	m_sponsor = t_sponsor;
-    m_startDate = t_startTime;
-    m_endDate = t_endTime;
-    m_title = t_title;
-    std::vector<string> v(t_participator);
+    	m_startDate = t_startTime;
+    	m_endDate = t_endTime;
+    	m_title = t_title;
+    	std::vector<string> v(t_participator);
 	m_participators = v;
 }
 
